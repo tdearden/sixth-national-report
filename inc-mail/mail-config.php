@@ -1,4 +1,17 @@
 <?php
+
+    $dotenv = new Dotenv\Dotenv(__DIR__);
+    $dotenv->load();
+
+    $mail->Port       = 587;
+    $mail->SMTPSecure = 'tls';
+    $mail->SMTPAuth   = true;
+    $mail->Host       = 'pod51017.outlook.com';
+    $mail->Username   = 'no-reply@unep-wcmc.org';
+    $mail->Password   = getenv('MAILER_PASSWORD');
+    $mail->setFrom('no-reply@unep-wcmc.org', 'Mailer');
+    $mail->IsHTML(true);
+
     $to = 'kaiser.sin17@gmail.com';
 
     $subject = 'UNBiodiversityLab';
