@@ -3,8 +3,6 @@
     $dotenv = new Dotenv\Dotenv(__DIR__);
     $dotenv->load();
 
-    $mail->Password   = getenv('MAILER_PASSWORD');
-
     $to = 'kaiser.sin17@gmail.com';
 
     $subject = 'UNBiodiversityLab';
